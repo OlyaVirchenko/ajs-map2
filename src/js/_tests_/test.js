@@ -10,9 +10,9 @@ test('Проверка работы метода settings', () => {
   expect(setting.settings).toEqual(result);
 });
 
-test('Проверка работы метода settings', () => {
+test('Проверка работы метода settings и changeSetting(key, value)', () => {
   const setting = new Settings();
-  setting.userSettings.set('music', 'rock');
+  setting.changeSetting('music', 'rock');
   const result = new Map([
     ['theme', 'dark'],
     ['music', 'rock'],
